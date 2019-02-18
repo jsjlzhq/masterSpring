@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+
+    <bean id="car" class="com.smart.attr.Car">
+        <property name="brand"><value>丰田</value></property>
+        <property name="color"><value>white</value></property>
+        <property name="maxSpeed"><value>180</value></property>
+        <property name="price"><value>300</value></property>
+    </bean>
+
+<!--    <util:set id="numset" value-type="int">
+        <value>3</value>
+        <value>5</value>
+        <value>8</value>
+    </util:set> -->
+
+    <bean id="boss" class="com.smart.attr.Boss">
+        <property name="car" ><ref bean="car"></ref></property>
+<!--                <property name="car" ref="car"/>-->
+        <!--<property name="car"><ref parent="car"/></property>-->
+        <property name="favorites">
+            <list>
+                <value>2.3</value>
+                <value>5</value>
+            </list>
+        </property>
+
+        <property name="nums">
+            <list>
+                <value>2</value>
+                <value>3</value>
+                <value>4</value>
+                <value>5</value>
+            </list>
+        </property>
+
+<!--        <property name="nameInfo" ref="numset"></property> -->
+        <property name="nameInfo">
+            <set>
+                <value>3</value>
+                <value>10</value>
+            </set>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    <bean id="car" class="com.smart.ditype.Car">
+        <property name="brand"><value>carolla</value></property>
+        <property name="maxSpeed"><value>200</value></property>
+        <property name="price"><value>10000</value></property>
+    </bean>
+    -->
+
+    <!--
+    <bean id="car1" class="com.smart.ditype.Car">
+        <constructor-arg type="java.lang.String" index="1">
+            <value>red</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String" index="0">
+            <value>红旗CA72</value>
+        </constructor-arg>
+    </bean>
+    -->
+
+    <!--
+    <bean id="carFactory" class="com.smart.ditype.CarFactory" />
+    <bean id="car5" factory-bean="carFactory" factory-method="createHongQiCar"/>
+    -->
+
+    <!--
+    <bean id="car6" class="com.smart.ditype.CarFactory" factory-method="createHongQiCar"/>
+    -->
+
+    <bean id="car7" class="com.smart.ditype.Car">
+        <property name="brand"><value>红旗&amp;CT72</value></property>
+    </bean>
+
+
+</beans>

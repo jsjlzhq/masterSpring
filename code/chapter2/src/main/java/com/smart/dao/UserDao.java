@@ -45,6 +45,7 @@ public class UserDao {
     }
 
     public void updateLoginInfo(User user) {
-        jdbcTemplate.update(UPDATE_LOGIN_INFO_SQL, user.getLastVisit(), user.getLastIp(), user.getCredits(), user.getUserId());
+        int intVal = jdbcTemplate.update(UPDATE_LOGIN_INFO_SQL, new Object[]{user.getLastVisit(), user.getLastIp(), user.getCredits(), user.getUserId()});
+        System.out.println(intVal);
     }
 }
